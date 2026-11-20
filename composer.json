@@ -1,0 +1,65 @@
+{
+    "name": "dbravoan/dbcms-module-content-audit",
+    "type": "dbcms-module",
+    "description": "Flujo editorial de calidad, inferencia de capacidad de publicación por roles, cola de aprobación previa, notificaciones automáticas y control exhaustivo de cambios con comparador visual (Diff) de versiones.",
+    "license": "MIT",
+    "require": {
+        "dbravoan/dbcms-core": "~0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "DbCms\\Modules\\ContentAudit\\": "./"
+        }
+    },
+    "extra": {
+        "dbcms": {
+            "name": "Auditoría de Contenidos & Control de Calidad",
+            "identifier": "content_audit",
+            "author": "dbCMS Core Team",
+            "description": "Flujo editorial de calidad, inferencia de capacidad de publicación por roles, cola de aprobación previa, notificaciones automáticas y control exhaustivo de cambios con comparador visual (Diff) de versiones.",
+            "provider": "DbCms\\Modules\\ContentAudit\\ContentAuditModuleServiceProvider",
+            "is_pageable": false,
+            "repository": "https://github.com/dbravoan/dbcms-module-content-audit"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "scripts": {
+        "fixture:lock": "@php tooling/package.php fixture:lock",
+        "prepare": "@php tooling/package.php prepare",
+        "test": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php tooling/package.php test"
+        ],
+        "check": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php tooling/package.php check"
+        ],
+        "test:dist": [
+            "Composer\\Config::disableProcessTimeout",
+            "@php tooling/package.php test:dist"
+        ],
+        "profiles": "@php tooling/package.php profiles"
+    },
+    "archive": {
+        "exclude": [
+            "/.build",
+            "/.github",
+            "/.gitignore",
+            "/.gitattributes",
+            "/tests",
+            "/tooling",
+            "/docker",
+            "/AGENTS.md",
+            "/compose.yaml",
+            "/pint.json",
+            "/phpunit.xml",
+            "/.node-version",
+            "/.dockerignore",
+            "/.env",
+            "/.env.*",
+            "/node_modules",
+            "/vendor"
+        ]
+    }
+}
