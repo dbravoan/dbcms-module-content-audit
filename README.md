@@ -20,9 +20,9 @@ migraciones y registra su estado. Desactivar conserva los datos y bloquea las
 contribuciones del módulo. Las dependencias activas impiden retirarlo de forma
 incoherente.
 
-Para una aplicación nueva también puedes seleccionarlo con
-`dbcms new mi-web --modules=content-audit`. La configuración inicial del sitio se completa
-en `/install`.
+Para una aplicación nueva, usa `dbcms new mi-web --module=content-audit` con Installer
+0.2. Completa la configuración inicial en `/install`.
+[Guía de Installer](https://github.com/dbravoan/dbcms-installer#crear-una-web)
 
 ## Desarrollo y mantenimiento
 
